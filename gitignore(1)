@@ -1,0 +1,31 @@
+# Fichiers compilés
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+
+# Dossiers de build
+build/
+bin/
+obj/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Binaire principal
+simulation
+simulation.exe
