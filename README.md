@@ -1,7 +1,7 @@
 # Simulation Proies / Prédateurs — Lotka-Volterra
 
 > Projet de fin de semestre — UE LIFAMI — Université Lyon 1 UCBL  
-> **Ghrab Mohamed Adam** — p2406783
+> **Ghrab Mohamed Adam** 
 
 ---
 
