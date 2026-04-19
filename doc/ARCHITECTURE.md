@@ -2,6 +2,131 @@
 
 ## Vue d'ensemble
 
+Fichier source unique `src/simulation.cpp` d'environ **2100 lignes**. Toute la logique passe par un struct `Monde` passé par référence (`Monde &m`) à chaque fonction.
+
+La fenêtre est divisée en deux zones :
+- **Grille** : 820 × 700 px → 54 × 46 cases de 15 px (DIMW × DIMH)
+- **Panneau** : 280 px à droite (stats, courbes, boutons saisons)
+
+---
+
+## Structures de données
+
+### `struct Animal`
+Partagé par lapins, loups et vaches.
+
+| Champ | Rôle |
+|-------|------|
+| `x, y` | Position en cases sur la grille |
+| `px_avant, py_avant` | Position mémorisée toutes les 3 frames — utilisée par le loup niv.2 pour calculer la vitesse du lapin |
+| `dir_x, dir_y` | Direction mémorisée dans `deplacer_*()`, lue dans les fonctions de dessin — corrige le bug de rotation en pause |
+| `genre` | `Femelle(0)` ou `Male(1)` |
+| `energie` | Diminue chaque frame, mort si ≤ 0 |
+| `age` | Mort si > `Age_max` |
+| `niveau` | 1 à 4, détermine le comportement |
+| `nb_echappements` | Lapins : seuils 1/3/6 → niv.2/3/4 |
+| `nb_repas` | Loups : seuils 3/6 → niv.2/3 |
+| `frames_depuis_repro` | Délai depuis la dernière reproduction |
+| `dans_vision_loup` | Vrai au tour précédent — transition true→false = échappement détecté |
+| `vivant` | false = mort, compactage en fin de frame |
+| `en_meute` | true si loup en meute (niveau 4) |
+| `etat` | `SAIN(0)`, `INFECTE(1)`, `RETABLI(2)` |
+| `timer_maladie` | Frames depuis infection ou guérison |
+
+### `struct Monde`
+
+| Champ notable | Description |
+|---------------|-------------|
+| `grille[DIMW][DIMH]` | `vide(0)`, `herbe(1)`, `brule(2)`, `feu(3)`, `cendre(4)` |
+| `timer_grille[DIMW][DIMH]` | Compteur pour les transitions brule→vide et cendre→vide |
+| `lapins[400]`, `loups[100]`, `vaches[50]` | Tableaux fixes |
+| `frame` | Affiché "Cycle" dans le panneau |
+| `courbe` | Objet Plot Grapic pour les 5 courbes |
+| `lv_N`, `lv_P` | Populations théoriques Lotka-Volterra (float, Euler) |
+| `saison` | `PRINTEMPS(0)`, `ETE(1)`, `AUTOMNE(2)`, `HIVER(3)` |
+| `nb_infectes_lapins/loups/vaches` | Comptage séparé affiché dans le panneau |
+| `vitesse` | 1 à 10 — seuil update = `11 - vitesse` |
+
+---
+
+## Ordre d'appel dans `update()`
+
+```
+pousser_herbe()
+  ↓
+lapins : vieillir → déplacer → manger_herbe
+reproduire_lapins()
+  ↓
+loups : vieillir → déplacer → manger_lapin (+ vaches)
+reproduire_loups() → verifier_meutes()
+  ↓
+vaches : vieillir → déplacer → manger_herbe_vache
+reproduire_vaches()
+  ↓
+update_meteorites() → update_incendie() → propager_maladie()
+  ↓
+compacter_lapins/loups/vaches()
+  ↓
+maj_niveaux() → maj_statistiques() → maj_historique()
+frame++
+```
+
+---
+
+## Algorithmes de direction
+
+| Fonction | Utilisée par | Comportement |
+|----------|-------------|--------------|
+| `direction_vers_herbe()` | Lapins niv.1, vaches | Case HERBE la plus proche dans un rayon |
+| `direction_fuite_aleatoire()` | Lapins niv.2 | Direction aléatoire évitant les loups à distance 1 |
+| `direction_fuite_intelligente()` | Lapins niv.3-4 | Maximise la distance au loup le plus proche (8 directions) |
+| `direction_vers_lapin()` | Loups niv.1 | Lapin le plus proche dans un rayon |
+| `direction_anticipee()` | Loups niv.2 | Prédit position future du lapin via `px_avant` |
+| `direction_vers_vache()` | Loups (fallback) | Vache la plus proche |
+| `direction_fuite_feu()` | Tous | Fuit à l'opposé du centre de gravité des flammes |
+| `direction_fuite_fermier()` | Loups | Fuit le fermier le plus proche |
+
+---
+
+## Dessin des animaux
+
+```cpp
+circleFill(px, py, taille);         // disque coloré selon niveau
+color(255, 255, 255);
+line(px, py, px+dx*taille, py+dy*taille);  // ligne de direction
+dessiner_maladie(gx, gy, etat);     // cercle jaune/cyan si malade
+```
+
+---
+
+## Incendie — double buffer
+
+```
+Copier m.grille → nouvelle_grille
+Pour chaque case FEU dans m.grille :
+    Tuer animaux sur cette case
+    Propager dans nouvelle_grille (pas m.grille)
+    Si timer > duree_feu → nouvelle_grille = CENDRE
+Recopier nouvelle_grille → m.grille
+```
+
+Sans double buffer, le feu brûlerait toute la carte en une frame. Même principe que le Jeu de la Vie (TD9 LIFAMI).
+
+---
+
+## Compactage des morts
+
+```cpp
+int w = 0;
+for (int i = 0; i < m.nb_lapins; i++)
+    if (m.lapins[i].vivant) m.lapins[w++] = m.lapins[i];
+m.nb_lapins = w;
+```
+
+On marque `vivant=false` pendant la frame, on compacte à la fin pour éviter de sauter des éléments en cours de boucle.# Architecture du code
+
+## Vue d'ensemble
+
 Le projet est un fichier source unique `src/simulation.cpp` d'environ **2100 lignes**, organisé en blocs thématiques séparés par des commentaires. Toute la logique passe par un seul grand struct `Monde` passé par référence (`Monde &m`) à chaque fonction.
 
 La fenêtre est divisée en deux zones :
