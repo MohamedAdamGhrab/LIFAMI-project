@@ -43,8 +43,8 @@ Chaque animal est représenté par un **disque coloré avec une ligne blanche** 
 | `F` + clic | Placer un fermier sur la grille (max 5) |
 | `M` + clic | Lancer une météorite (max 3 simultanées) |
 | `I` + clic | Démarrer un incendie |
-| `+` | Augmenter la vitesse (max 10) |
-| `6` | Diminuer la vitesse (min 1) |
+| `+ ou =` | Augmenter la vitesse (maximum 10) |
+| `6 ou -` | Diminuer la vitesse (minimum 1) |
 | Boutons saisons | Changer la saison en cliquant dans le panneau droit |
 | `ECHAP` | Quitter |
 
