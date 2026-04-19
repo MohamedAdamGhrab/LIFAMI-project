@@ -32,11 +32,11 @@ Deux espèces seulement (lapins + loups), pas de vaches, pas de saisons, pas de 
 
 **Quasi-extinction** (frame 412) — 11 lapins, 1 loup. Les loups avaient atteint les niveaux 2 et 3 avant de décimer la population :
 
-![Quasi extinction dépôt 1](../screenshots/quasi_extinction_lapins.png)
+![Extinction loups dépôt 1](../screenshots/extinction_loups.png)
 
 **Extinction des loups** (frame 682) — Loups:0, 10 lapins survivants. L'herbe reconquiert toute la carte. Illustration de l'effondrement Lotka-Volterra :
 
-![Extinction loups dépôt 1](../screenshots/extinction_loups.png)
+![Quasi extinction dépôt 1](../screenshots/quasi_extinction_lapins.png)
 
 ---
 
