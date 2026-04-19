@@ -32,7 +32,7 @@ Chaque animal est un **disque coloré avec une ligne blanche** indiquant sa dire
 
 **Début de simulation** — 25 lapins (bleus), 15 loups (rouges), 7 vaches (marron), panneau avec courbes :
 
-![Début simulation](screenshots/debut_simulation2.png)
+![Début simulation](screenshots/debut_simulation.png)
 
 **Météorites + Fermiers + Incendie simultanés** — cratères marron, cercles bleus des fermiers, feu jaune/orange, cercles jaunes = animaux infectés :
 
