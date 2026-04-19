@@ -70,7 +70,7 @@ line(px, py, px + dx*taille, py + dy*taille);
 
 **Début simulation** — 25 lapins, 15 loups, 7 vaches, panneau avec courbes démarrées :
 
-![Début simulation finale](screenshots/debut_simulation.png)
+![Début simulation finale](screenshots/debut_simulation2.png)
 
 **Météorites + Fermiers + Incendie** (cycle 35) — cratères marron foncé, cercles bleus de protection, feu jaune bas-gauche, cercles jaunes = animaux infectés :
 
