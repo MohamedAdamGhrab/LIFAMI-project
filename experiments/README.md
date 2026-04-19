@@ -76,7 +76,7 @@ line(px, py, px + dx*taille, py + dy*taille);
 
 ![Météorites fermiers incendie](../screenshots/meteorites_fermiers.png)
 
-**Incendie massif + Cendres** (cycle 66) — le feu orange laisse des cendres grises (CENDRE), les animaux restants fuient. Les fermiers maintiennent leurs zones protégées :
+**Incendie massif + Cendres** (cycle 77) — le feu orange laisse des cendres grises (CENDRE), les animaux restants fuient. Les fermiers maintiennent leurs zones protégées :
 
 ![Incendie complet](../screenshots/incendie_complet.png)
 
