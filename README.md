@@ -100,20 +100,15 @@ make
 
 ```
 LIFAMI-project/
-├── src/
-│   └── simulation.cpp            # Code source (~2100 lignes)
 ├── doc/
 │   ├── ARCHITECTURE.md           # Structs, fonctions, algorithmes
 │   ├── MODELES_SCIENTIFIQUES.md  # Lotka-Volterra, SIR, automate cellulaire
 │   ├── CHANGELOG.md              # Historique des dépôts
-│   └── POUR_LES_CURIEUX.md       # Explication simple sans jargon
 ├── experiments/
 │   ├── README.md                 # Historique du développement
-│   ├── depot1/                   # Screenshots version triangles
-│   └── depot_final/              # Screenshots version finale
 ├── screenshots/                  # Captures de la version finale
-├── .gitignore
-├── Makefile
+├── src/
+│   └── simulation.cpp            # Code source (~2100 lignes)
 └── README.md
 ```
 
