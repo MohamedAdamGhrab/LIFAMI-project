@@ -109,7 +109,9 @@ LIFAMI-project/
 ├── screenshots/                  # Captures de la version finale
 ├── src/
 │   └── simulation.cpp            # Code source (~2100 lignes)
+└── Makefile
 └── README.md
+└── gitignore
 ```
 
 ---
