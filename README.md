@@ -40,7 +40,7 @@ Chaque animal est un **disque coloré avec une ligne blanche** indiquant sa dire
 
 **Incendie massif + Cendres** — le feu (orange/rouge) laisse des cendres grises, les animaux fuient. On voit les fermiers protégeant leurs zones :
 
-![Incendie et cendres](screenshots/incendie_cendres.png)
+![Incendie et cendres](screenshots/incendie_complet.png)
 
 **Incendie + Météorite + courbes** — plusieurs catastrophes simultanées, les courbes montrent la chute des populations :
 
