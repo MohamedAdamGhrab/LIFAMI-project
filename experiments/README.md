@@ -28,15 +28,15 @@ Deux espèces seulement (lapins + loups), pas de vaches, pas de saisons, pas de 
 
 **Début de simulation** (frame 2) — 56 lapins (triangles bleus), 8 loups (triangles rouges), tous niveau 1 :
 
-![Début simulation dépôt 1](depot1/debut_simulation.png)
+![Début simulation dépôt 1](screenshots/debut_simulation.png)
 
 **Quasi-extinction** (frame 412) — 11 lapins, 1 loup. Les loups avaient atteint les niveaux 2 et 3 avant de décimer la population :
 
-![Quasi extinction dépôt 1](depot1/quasi_extinction_lapins.png)
+![Quasi extinction dépôt 1](screenshots/quasi_extinction_lapins.png)
 
 **Extinction des loups** (frame 682) — Loups:0, 10 lapins survivants. L'herbe reconquiert toute la carte. Illustration de l'effondrement Lotka-Volterra :
 
-![Extinction loups dépôt 1](depot1/extinction_loups.png)
+![Extinction loups dépôt 1](screenshots/extinction_loups.png)
 
 ---
 
@@ -70,19 +70,19 @@ line(px, py, px + dx*taille, py + dy*taille);
 
 **Début simulation** — 25 lapins, 15 loups, 7 vaches, panneau avec courbes démarrées :
 
-![Début simulation finale](depot_final/debut_simulation.png)
+![Début simulation finale](screenshots/debut_simulation.png)
 
 **Météorites + Fermiers + Incendie** (cycle 35) — cratères marron foncé, cercles bleus de protection, feu jaune bas-gauche, cercles jaunes = animaux infectés :
 
-![Météorites fermiers incendie](depot_final/meteorites_fermiers.png)
+![Météorites fermiers incendie](screenshots/meteorites_fermiers.png)
 
 **Incendie massif + Cendres** (cycle 66) — le feu orange laisse des cendres grises (CENDRE), les animaux restants fuient. Les fermiers maintiennent leurs zones protégées :
 
-![Incendie complet](depot_final/incendie_complet.png)
+![Incendie complet](screenshots/incendie_complet.png)
 
 **Quasi-extinction + Courbes LV** (cycle 602, saison Été) — 4 lapins, loups éteints. Les courbes montrent la divergence entre simulation (escalier bleu) et théorie (courbe cyan) provoquée par les catastrophes :
 
-![Quasi extinction courbes](depot_final/quasi_extinction_courbes.png)
+![Quasi extinction courbes](screenshots/quasi_extinction_courbes.png)
 
 ---
 
