@@ -32,23 +32,19 @@ Chaque animal est un **disque coloré avec une ligne blanche** indiquant sa dire
 
 **Début de simulation** — 25 lapins (bleus), 15 loups (rouges), 7 vaches (marron), panneau avec courbes :
 
-![Début simulation](screenshots/debut_simulation.png)
+![Début simulation](screenshots/debut_simulation2.png)
 
 **Météorites + Fermiers + Incendie simultanés** — cratères marron, cercles bleus des fermiers, feu jaune/orange, cercles jaunes = animaux infectés :
 
-![Météorites fermiers incendie](screenshots/03_meteorites_fermiers_incendie.png)
+![Météorites fermiers incendie](screenshots/meteorites_fermiers_incendie.png)
 
 **Incendie massif + Cendres** — le feu (orange/rouge) laisse des cendres grises, les animaux fuient. On voit les fermiers protégeant leurs zones :
 
-![Incendie et cendres](screenshots/04_incendie_cendres.png)
+![Incendie et cendres](screenshots/meteorites_fermiers.png)
 
 **Incendie + Météorite + courbes** — plusieurs catastrophes simultanées, les courbes montrent la chute des populations :
 
-![Incendie météorite](screenshots/05_incendie_meteorite_fermiers.png)
-
-**Quasi-extinction en été + courbes LV** — 4 lapins survivants, loups éteints, courbes bleue (simulée) vs cyan (théorique Lotka-Volterra) :
-
-![Quasi extinction courbes](screenshots/06_quasi_extinction_courbes.png)
+![Incendie météorite](screenshots/incendie_meteorite_fermiers.png)
 
 ---
 
