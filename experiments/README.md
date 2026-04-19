@@ -28,7 +28,7 @@ Deux espèces seulement (lapins + loups), pas de vaches, pas de saisons, pas de 
 
 **Début de simulation** (frame 2) — 56 lapins (triangles bleus), 8 loups (triangles rouges), tous niveau 1 :
 
-![Début simulation](screenshots/debut_simulation.png)
+![Début simulation](../screenshots/debut_simulation.png)
 
 **Quasi-extinction** (frame 412) — 11 lapins, 1 loup. Les loups avaient atteint les niveaux 2 et 3 avant de décimer la population :
 
