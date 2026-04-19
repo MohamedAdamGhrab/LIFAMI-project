@@ -57,7 +57,6 @@ Chaque animal est un **disque coloré avec une ligne blanche** indiquant sa dire
 - **Système de niveaux 1 à 4** — lapins : via échappements aux loups / loups : via repas
 - **Meutes de loups** — formation dynamique de 3 loups niveau 3 proches, dissolution si séparation
 - **4 saisons cliquables** — modifient la pousse de l'herbe, la reproduction, la vision des loups et l'énergie
-  [Voir la vidéo des saisons](../screenshots/saison.mp4)
 - **Modèle SIR** — épidémie contagieuse avec comptage séparé par espèce (lapins / loups / vaches)
 - **Fermiers** — zones de protection placées au clic, les loups fuient et perdent de l'énergie
 - **Météorites** — cratère immédiat + onde de choc progressive repoussant les animaux
