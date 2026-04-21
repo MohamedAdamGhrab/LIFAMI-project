@@ -103,9 +103,10 @@ LIFAMI-project/
 ├── doc/
 │   ├── ARCHITECTURE.md           # Structs, fonctions, algorithmes
 │   ├── MODELES_SCIENTIFIQUES.md  # Lotka-Volterra, SIR, automate cellulaire
-│   ├── CHANGELOG.md              # Historique des dépôts
-├── experiments/
-│   ├── README.md                 # Historique du développement
+│   └──CHANGELOG.md              # Historique des dépôts
+├── experiments/                  # Historique du développement
+|   ├──Historique par semaines.md 
+│   └── README.md                 
 ├── screenshots/                  # Captures de la version finale
 ├── src/
 │   └── simulation.cpp            # Code source (~2100 lignes)
