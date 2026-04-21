@@ -1,6 +1,6 @@
 # Historique des évolutions — Semaine par semaine
 
-> **Ghrab Mohamed Adam — p2406783 — UE LIFAMI — Lyon 1**  
+> **Ghrab Mohamed Adam — UE LIFAMI — Lyon 1**  
 > Mini-projet : Simulation Proies/Prédateurs — Lotka-Volterra
 
 ---
