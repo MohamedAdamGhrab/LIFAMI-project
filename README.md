@@ -102,8 +102,8 @@ make
 LIFAMI-project/
 ├── doc/
 │   ├── ARCHITECTURE.md           # Structs, fonctions, algorithmes
-│   ├── MODELES_SCIENTIFIQUES.md  # Lotka-Volterra, SIR, automate cellulaire
-│   └──CHANGELOG.md              # Historique des dépôts
+│   ├── CHANGELOG.md              # Historique des dépôts
+│   └── MODELES_SCIENTIFIQUES.md  # Lotka-Volterra, SIR, automate cellulaire
 ├── experiments/                  # Historique du développement
 |   ├──Historique par semaines.md 
 │   └── README.md                 
